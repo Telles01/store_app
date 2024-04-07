@@ -18,4 +18,17 @@ Rails.application.routes.draw do
   #create store
   post 'stores', to: 'stores#create'
 
+
+   #show edit form
+
+   get 'stores/:id/edit', to: 'stores#edit', as: 'edit_store'
+
+    #update store
+
+    patch 'stores/:id', to: 'stores#update'
+
+    #delete store
+
+    delete 'stores/:id', to: 'stores#destroy'
+
 end

@@ -4,3 +4,12 @@
 <p>Name: <%= @store.name  %></p>
 <p>Address: <%= @store.address  %></p>
 <p>Stars: <%= @store.stars  %></p>
+
+
+<p>
+<%= link_to 'Edit', edit_store_path(@store) %>
+</p>
+
+<p>
+<%= link_to 'Remove this Store', store_path, method: :delete %>
+</p>

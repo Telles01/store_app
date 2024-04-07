@@ -7,8 +7,15 @@ Rails.application.routes.draw do
   #List all stores
   get 'stores', to: 'stores#index'
 
+  #show create form
+  get 'stores/new', to: 'stores#new'
 
   #List one store
-  get 'stores/:id', to: 'stores#show'
+  get 'stores/:id', to: 'stores#show', as: 'store'
+
+
+
+  #create store
+  post 'stores', to: 'stores#create'
 
 end
